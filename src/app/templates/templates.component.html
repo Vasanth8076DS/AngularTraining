@@ -1,0 +1,74 @@
+<div>
+  <h1>templates Examples</h1>
+  <h3>Interpolation:</h3>
+  <p>
+    Interpolation is used to display dynamic data in your templates. You can
+    enclose an expression within double curly braces to interpolate it into your
+    HTML.
+  </p>
+  <h4>Example;</h4>
+  <p>Hello, {{ title }}</p>
+  <br />
+  <h3>Template Statements (Event Binding):</h3>
+  <p>
+    You can respond to events in your template by using event binding. You use
+    (event) to bind an event to a method in your component class.
+  </p>
+  <h4>Example;</h4>
+  <p><button (click)="updateMessage()">Click me</button></p>
+  <p>Hello, {{ title }}</p>
+  <br />
+  <h3>Property Binding:</h3>
+  <p>
+    Property binding allows you to set properties of HTML elements or
+    directives. You use square brackets [] to bind a property.
+  </p>
+  <h4>Example;</h4>
+  <img [src]="imageUrl" />
+  <br />
+  <h3>Attribute, Class, and Style Binding:</h3>
+  <p>
+    You can use binding to set values for attributes, classes, and styles in
+    your HTML.
+  </p>
+  <h4>Example;</h4>
+  <div
+    [attr.data-custom]="customData"
+    [class.error]="isError"
+    [style.color]="textColor"
+  >
+    You can use binding to set values for attributes, classes, and styles in
+    your HTML.
+  </div>
+  <br />
+  <h3>Two-Way Binding:</h3>
+  <p>
+    Two-way binding is used to synchronize data between a component's property
+    and an input element's value. It combines property and event binding using
+    [(ngModel)].
+  </p>
+  <h4>Example;</h4>
+  <input [(ngModel)]="name" placeholder="Enter your name" />
+  <p>{{ name }}</p>
+  4
+  <br />
+  <h3>Built-In Directives:</h3>
+  <p>
+    Angular provides built-in directives like *ngFor, *ngIf, and *ngSwitch to
+    modify the behavior and layout of HTML elements.
+  </p>
+  <h4>Example (*ngFor):</h4>
+  <ul>
+    <li *ngFor="let item of items">{{ item }}</li>
+  </ul>
+  <h3>Template Reference Variable:</h3>
+  <p>
+    Template reference variables allow you to refer to DOM elements within your
+    template.
+  </p>
+  <h4>
+    Example:
+  </h4>
+  <input #nameInput type="text" />
+<button (click)="setName(nameInput.value)">Set Name</button>
+</div>
