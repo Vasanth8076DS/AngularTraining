@@ -1,0 +1,19 @@
+<h1>{{ childMessage }}</h1>
+<table aria-sort="descending">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of objProps">
+      <td>{{ item.id }}</td>
+      <td>{{ item.name }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<button (click)="sendMessage('Message for Parent')" class="custom-button">
+  Message for Parent 
+</button>

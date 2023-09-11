@@ -1,0 +1,5 @@
+<app-child [childMessage]="parentMessage" [objProps]="objParent" (MessageFromChild)="handleMessageFromChild($event)"></app-child>
+
+
+<p>Message from child: {{ parentMessage }}</p>
+
