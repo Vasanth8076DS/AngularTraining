@@ -1,0 +1,63 @@
+/* app.component.css */
+
+/* Define a class for the table */
+.custom-table {
+  width: 100%; /* Set the table width to 100% */
+  border-collapse: collapse; /* Collapse table borders */
+}
+
+/* Style the table header row */
+.custom-table th {
+  background-color: #f2f2f2; /* Header background color */
+  text-align: left; /* Header text alignment */
+  padding: 10px; /* Header cell padding */
+  border: 1px solid #dddddd; /* Header cell border */
+}
+
+/* Style the table data rows */
+.custom-table td {
+  text-align: left; /* Data cell text alignment */
+  padding: 10px; /* Data cell padding */
+  border: 1px solid #dddddd; /* Data cell border */
+}
+
+h3 {
+  color: #007bff;
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+.india {
+  color: green; /* India-specific styling */
+}
+
+.usa {
+  color: blue; /* USA-specific styling */
+}
+
+.australia {
+  color: red; /* Australia-specific styling */
+}
+
+.england {
+  color: purple; /* England-specific styling */
+}
+
+.default {
+  color: black; /* Default styling for other countries */
+}
+
+.toggle-button {
+  padding: 10px 20px; /* Adjust padding as needed */
+  background-color: #007bff; /* Change the background color */
+  color: #fff; /* Change the text color */
+  border: none; /* Remove button border */
+  cursor: pointer; /* Add a pointer cursor on hover */
+  border-radius: 4px; /* Add some rounded corners */
+}
+
+.toggle-button:hover {
+  background-color: #0056b3; /* Change the background color on hover */
+}
+

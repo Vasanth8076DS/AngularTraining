@@ -1,0 +1,65 @@
+<h3 >ngFor</h3>
+
+
+
+<table class="custom-table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Country</th>
+      <th>Password</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.id }}</td>
+      <td>{{ user.username }}</td>
+      <td>{{ user.country }}</td>
+      <td>{{ user.password }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 >ngIF</h3>
+<button class="toggle-button" (click)="toggleCountryColumn()">Toggle Country Column</button>
+<table class="custom-table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th *ngIf="showCountryColumn">Country</th> <!-- Conditionally display the Country column -->
+      <th>Password</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.id }}</td>
+      <td>{{ user.username }}</td>
+      <td *ngIf="showCountryColumn">{{ user.country }}</td> <!-- Conditionally display the Country cell -->
+      <td>{{ user.password }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 >ngSwitch</h3>
+<table class="custom-table">
+  <thead>
+    <tr>
+      
+      <th>Country</th>
+    
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td [ngSwitch]="user.country">
+        <span *ngSwitchCase="'australia'" [ngClass]="getCountryClass(user.country)">Australia</span>
+        <span *ngSwitchCase="'usa'" [ngClass]="getCountryClass(user.country)">USA</span>
+        <span *ngSwitchCase="'default'" [ngClass]="getCountryClass(user.country)">{{ user.country }}</span>
+      </td>
+
+    </tr>
+  </tbody>
+</table>
+
