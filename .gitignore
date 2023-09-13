@@ -9,6 +9,6 @@ package-lock.json
 # production
 /build
 # misc
-/.angular/cache
+.angular/cache/
 
 
