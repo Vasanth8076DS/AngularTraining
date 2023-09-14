@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HelloWorldComponent } from './hello-world/hello-world.component';
 import { FormsModule } from '@angular/forms';
+import { BindingwithformComponent } from './bindingwithform/bindingwithform.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HelloWorldComponent
+    HelloWorldComponent,
+    BindingwithformComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,56 @@
+<div class="container mt-5">
+  <h2 class="text-center">Data Binding Example</h2>
+  <div class="row">
+    <div class="col-md-6">
+      <!-- One-way binding -->
+      <div class="form-group">
+        <h3>One-Way Binding</h3>
+        <p>{{ userInput }}</p>
+        <input
+          type="text"
+          [(ngModel)]="userInput"
+          class="form-control"
+          placeholder="Enter text"
+        />
+      </div>
+
+      <!-- Property binding -->
+      <div class="form-group">
+        <h3>Property Binding</h3>
+        <p [ngClass]="dynamicClass">This text has dynamic class</p>
+        <button [disabled]="isDisabled" class="btn btn-primary">
+          Disable Me
+        </button>
+      </div>
+
+      <!-- Event binding -->
+      <div class="form-group">
+        <h3>Event Binding</h3>
+        <button (click)="onSubmit()" class="btn btn-success">
+          Submit Form
+        </button>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <!-- Two-way binding -->
+      <div class="form-group">
+        <h3>Two-Way Binding</h3>
+        <input
+          [(ngModel)]="userInput"
+          class="form-control"
+          placeholder="Enter text"
+        />
+      </div>
+
+      <!-- Conditional rendering -->
+      <div class="form-group">
+        <h3>Conditional Rendering</h3>
+        <div *ngIf="showElement">This element is visible</div>
+        <button (click)="showElement = !showElement" class="btn btn-info">
+          Toggle Element
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
