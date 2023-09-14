@@ -1,0 +1,45 @@
+<div class="container mt-5">
+  <div class="alert alert-success" *ngIf="isVisible">This is visible</div>
+
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let item of items">{{ item }}</li>
+  </ul>
+
+  <div [ngStyle]="{ color: isRed ? 'red' : 'blue' }" class="mt-3">
+    Colored text
+  </div>
+
+  <p
+    [ngClass]="{ 'text-danger': isHighlighted, 'font-italic': isItalic }"
+    class="mt-3"
+  >
+    Styled text
+  </p>
+
+  <input
+    [(ngModel)]="name"
+    class="form-control mt-3"
+    placeholder="Enter a name"
+  />
+
+  <div [ngSwitch]="color" class="mt-3">
+    <p *ngSwitchCase="'red'" class="text-danger">Red Color</p>
+    <p *ngSwitchCase="'blue'" class="text-primary">Blue Color</p>
+    <p *ngSwitchDefault class="text-dark">Default Color</p>
+  </div>
+
+  <button (click)="doSomething()" class="btn btn-primary mt-3">Click me</button>
+
+  <form (ngSubmit)="submitForm()" class="mt-3">
+    <!-- Form fields go here -->
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+
+  <div
+    [ngClass]="classObject"
+    [ngStyle]="styleObject"
+    class="mt-3 p-3 bg-warning text-white"
+  >
+    Dynamic styling
+  </div>
+</div>

@@ -1,8 +1,28 @@
-<div class="d-flex flex-row justify-content-center">
-  <h1>Welcome to My Angular App</h1>
-  <p>{{ message }}</p>
-  <button (click)="updateMessage()">Update Message</button>
-  <button [disabled]="disableBtn">Will be disabling</button>
-<input type="text" [(ngModel)]="message11" value="">
-<p>{{message11}}</p>
+<div class="container">
+  <!-- Added container class for Bootstrap layout -->
+  <div class="d-flex flex-column align-items-center mt-5">
+    <!-- Added margin and alignment classes -->
+    <h1 class="text-center mb-4">Welcome to My Angular App</h1>
+    <!-- Centered and added margin bottom -->
+    <p class="text-muted">{{ message }}</p>
+    <!-- Muted text color -->
+    <button class="btn btn-primary mt-3" (click)="updateMessage()">
+      Update Message
+    </button>
+    <!-- Styled as a primary button with margin top -->
+    <button class="btn btn-secondary mt-2" [disabled]="disableBtn">
+      Will be disabling
+    </button>
+    <!-- Styled as a secondary button with margin top -->
+    <input
+      type="text"
+      class="form-control mt-3"
+      [(ngModel)]="message11"
+      value=""
+      placeholder="Enter a message"
+    />
+    <!-- Styled as a form control with margin top -->
+    <p class="mt-2">{{ message11 }}</p>
+    <!-- Added margin top -->
+  </div>
 </div>
