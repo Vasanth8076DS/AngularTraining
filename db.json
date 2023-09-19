@@ -1,0 +1,81 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "users": [
+    {
+      "firstName": "Vasanth",
+      "lastName": "V",
+      "email": "vasanthvkvp@gmail.com",
+      "dob": "2023-09-18T18:30:00.000Z",
+      "gender": "male",
+      "education": "",
+      "company": "DataSirpi",
+      "experiance": 1,
+      "package": 3,
+      "id": 1
+    },
+    {
+      "firstName": "Test",
+      "lastName": "User1",
+      "email": "test@gmail.com",
+      "dob": "2023-09-18T18:30:00.000Z",
+      "gender": "male",
+      "education": "",
+      "company": "DataSirpi",
+      "experiance": 3,
+      "package": 3,
+      "id": 2
+    },
+    {
+      "firstName": "Anand",
+      "lastName": "A",
+      "email": "anand@datasirpi.com",
+      "dob": "2023-09-02T18:30:00.000Z",
+      "gender": "male",
+      "education": "",
+      "company": "DataSirpi",
+      "experiance": 10,
+      "package": 10,
+      "id": 3
+    },
+    {
+      "firstName": "Test",
+      "lastName": "User2",
+      "email": "test@gmail.com",
+      "dob": "2023-09-02T18:30:00.000Z",
+      "gender": "male",
+      "education": "",
+      "company": "DataSirpi",
+      "experiance": 3,
+      "package": 5,
+      "id": 4
+    },
+    {
+      "firstName": "Test",
+      "lastName": "User4",
+      "email": "test1@gmail.com",
+      "dob": "2023-09-02T18:30:00.000Z",
+      "gender": "male",
+      "education": "",
+      "company": "DataSirpi",
+      "experiance": 4,
+      "package": 5,
+      "id": 5
+    }
+  ]
+}

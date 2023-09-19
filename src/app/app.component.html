@@ -1,4 +1,51 @@
-
-<app-hello-world></app-hello-world>
-
-<router-outlet></router-outlet>
+<!-- <app-hello-world></app-hello-world> -->
+<p>
+  <mat-toolbar color="primary">
+    <span>CRUD Operation</span>
+    <span class="example-spacer"></span>
+    <button mat-raised-button  (click)="openUserDialog()">
+      ADD USER
+    </button>
+  </mat-toolbar>
+</p>
+<div class="container mt-5">
+  <table class="table table-bordered table-striped table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Date of Birth</th>
+        <th>Education</th>
+        <th>Gender</th>
+        <th>Experience</th>
+        <th>Company</th>
+        <th>Package</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of usersData">
+        <td>{{ user.id }}</td>
+        <td>{{ user.firstName }}</td>
+        <td>{{ user.lastName }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.dob | date }}</td>
+        <td>{{ user.education }}</td>
+        <td>{{ user.gender }}</td>
+        <td>{{ user.experiance  }}</td>
+        <td>{{ user.company }}</td>
+        <td>{{ user.package | currency:"INR"}}L</td>
+        <td>
+          <button mat-icon-button color="primary" (click)="openEditForm(user)" >
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button color="warn" (click)="deleteUser(user.id)" >
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
